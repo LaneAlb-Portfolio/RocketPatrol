@@ -4,6 +4,6 @@ class Play extends Phaser.Scene{
     }
 
     create(){
-        this.add.text(20,20, "Buki Patrol Play");
+        this.add.text(20,20, "Rocket Patrol Play");
     }
 }
