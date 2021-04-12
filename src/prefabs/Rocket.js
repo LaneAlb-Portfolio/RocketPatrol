@@ -1,4 +1,4 @@
-const { Phaser } = require("../../lib/phaser.min");
+//const { Phaser } = require("../../lib/phaser.min");
 
 // Rocket -> "Player" Prefab
 class Rocket extends Phaser.GameObjects.Sprite {
