@@ -1,3 +1,5 @@
+const { Phaser } = require("../../lib/phaser.min");
+
 // Rocket -> "Player" Prefab
 class Rocket extends Phaser.GameObjects.Sprite {
     constructor(scene, x, y , texture, frame){
@@ -19,7 +21,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
             }
         }
         // firing
-        if(Phaser.Input.Keyboad.JustDown(keyF)){
+        if(Phaser.Input.Keyboad.justDown(keyF)){
             this.isFiring = true;
             this.sfxRocket.play();
         }
