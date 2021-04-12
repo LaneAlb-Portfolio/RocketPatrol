@@ -11,10 +11,6 @@ class Menu extends Phaser.Scene{
     }
 
     create(){
-        //this.add.text(20,20, "Rocket Patrol Menu");
-        // change scenes
-        //this.scene.start("playScene");
-        // menu text configuration
         let menuConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
@@ -29,11 +25,11 @@ class Menu extends Phaser.Scene{
         }
         
         // show menu text
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPad, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color = '#000';
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPad, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
 
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
