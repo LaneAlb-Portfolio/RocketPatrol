@@ -20,6 +20,14 @@ class Play extends Phaser.Scene{
         this.p1Rocket = new Rocket(this, game.config.width / 2, game.config.height - (borderUISize + borderPad), 
         'rocket', 0).setOrigin(0.5,0);
 
+        // Spaceships
+        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0,30)
+        .setOrigin(0,0);
+        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPad*2, 
+        'spaceship', 0,20).setOrigin(0,0);
+        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderUISize*4, 'spaceship', 0,10)
+        .setOrigin(0,0);
+
         // UI Background
         this.add.rectangle(0, borderUISize + borderPad, game.config.width, borderUISize *2, 0x00FF00) // ( X, Y, Width, Height, Color )
         .setOrigin(0,0);
@@ -44,5 +52,9 @@ class Play extends Phaser.Scene{
         this.starfield.tilePositionX -= starSpeed;
         // update Rocket
         this.p1Rocket.update();
+        // update ships
+        this.ship01.update();
+        this.ship02.update();
+        this.ship03.update();
     }
 }
