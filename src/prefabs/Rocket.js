@@ -21,7 +21,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
             }
         }
         // firing
-        if(Phaser.Input.Keyboard.JustDown(keyF)){
+        if(Phaser.Input.Keyboard.JustDown(keyF) && !this.isFiring){
             this.isFiring = true;
             this.sfxRocket.play();
         }
@@ -30,7 +30,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
             this.y -= this.moveSpeed;
         }
         // reset if projectile miss
-        if(this.y >= borderUISize * 3 + borderPad){
+        if(this.y <= borderUISize * 3 + borderPad){
             this.reset();
         }
     }
